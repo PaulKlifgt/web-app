@@ -40,7 +40,7 @@ def create():
         try:
             db.session.add(post)
             db.session.commit()
-            return  redirect('/index')
+            return redirect('/index')
         except:
             return 'При добавлении поста произошла ошибка'
         
