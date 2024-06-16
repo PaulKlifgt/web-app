@@ -16,6 +16,7 @@ class Post(db.Model):
 @app.route('/index')
 @app.route('/')
 def index():
+    db.create_all()
     return render_template('index.html')
 
 
@@ -50,4 +51,4 @@ def create():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False, port=8080)
