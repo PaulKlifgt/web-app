@@ -12,6 +12,7 @@ class Post(db.Model):
     title = db.Column(db.String(100), nullable=False)
     text= db.Column(db.Text, nullable=False)
 
+
 @app.route('/index')
 @app.route('/')
 def index():
@@ -46,8 +47,6 @@ def create():
         
     else:
         return render_template('create.html')
-
-
 
 
 if __name__ == '__main__':
